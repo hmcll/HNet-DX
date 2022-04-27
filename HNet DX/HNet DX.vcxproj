@@ -116,7 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Documents\GitHub\DirectXTK\Inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Documents\GitHub\DirectXTK\Inc;$(ProjectDir)Include\ImGUI;$(ProjectDir)Include\OpenFBX</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
@@ -142,33 +142,41 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="imgui.cpp" />
-    <ClCompile Include="imgui_demo.cpp" />
-    <ClCompile Include="imgui_draw.cpp" />
-    <ClCompile Include="imgui_impl_dx11.cpp" />
-    <ClCompile Include="imgui_impl_win32.cpp" />
-    <ClCompile Include="imgui_widgets.cpp" />
+    <ClCompile Include="Include\ImGUI\imgui.cpp" />
+    <ClCompile Include="Include\ImGUI\imgui_demo.cpp" />
+    <ClCompile Include="Include\ImGUI\imgui_draw.cpp" />
+    <ClCompile Include="Include\ImGUI\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Include\ImGUI\imgui_impl_win32.cpp" />
+    <ClCompile Include="Include\ImGUI\imgui_widgets.cpp" />
+    <ClCompile Include="Include\OpenFBX\miniz.c" />
+    <ClCompile Include="Include\OpenFBX\ofbx.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="tiny_obj_loader.cc" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="ShaderManager.cpp" />
+    <ClInclude Include="Include\ImGUI\imconfig.h" />
+    <ClInclude Include="Include\ImGUI\imgui.h" />
+    <ClInclude Include="Include\ImGUI\imgui_impl_dx11.h" />
+    <ClInclude Include="Include\ImGUI\imgui_impl_win32.h" />
+    <ClInclude Include="Include\ImGUI\imgui_internal.h" />
+    <ClInclude Include="Include\ImGUI\imstb_rectpack.h" />
+    <ClInclude Include="Include\ImGUI\imstb_textedit.h" />
+    <ClInclude Include="Include\ImGUI\imstb_truetype.h" />
+    <ClInclude Include="Include\OpenFBX\miniz.h" />
+    <ClInclude Include="Include\OpenFBX\ofbx.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="ShaderManager.h" />
+    <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="imconfig.h" />
-    <ClInclude Include="imgui.h" />
-    <ClInclude Include="imgui_impl_dx11.h" />
-    <ClInclude Include="imgui_impl_win32.h" />
-    <ClInclude Include="imgui_internal.h" />
-    <ClInclude Include="imstb_rectpack.h" />
-    <ClInclude Include="imstb_textedit.h" />
-    <ClInclude Include="imstb_truetype.h" />
     <ClInclude Include="Include.h" />
-    <ClInclude Include="tiny_obj_loader.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="TextureManager.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="ImGuiVertex.hlsl">
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
-    </FxCompile>
+    <FxCompile Include="Include\ImGUI\ImGuiVertex.hlsl" />
     <FxCompile Include="pixelShader.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
     </FxCompile>
@@ -180,6 +188,9 @@
     <ProjectReference Include="D:\Documents\GitHub\DirectXTK\DirectXTK_Desktop_2022.vcxproj">
       <Project>{e0b52ae7-e160-4d32-bf3f-910b785e5a8e}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\CO.fbx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

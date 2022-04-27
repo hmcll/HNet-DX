@@ -16,8 +16,8 @@
     <Filter Include="Header Files\ImGui">
       <UniqueIdentifier>{e6be2936-36ea-4255-b9af-06284d2c6558}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\tiny_obj_loader">
-      <UniqueIdentifier>{97294e27-a71a-4ba8-8e14-95adce9482fd}</UniqueIdentifier>
+    <Filter Include="Header Files\OpenFBX">
+      <UniqueIdentifier>{827f1756-ce42-49f4-b300-cf228b65d925}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -27,72 +27,107 @@
     <ClCompile Include="Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="imgui.cpp">
+    <ClCompile Include="ShaderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\ImGUI\imgui.cpp">
       <Filter>Header Files\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="imgui_demo.cpp">
+    <ClCompile Include="Include\ImGUI\imgui_demo.cpp">
       <Filter>Header Files\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="imgui_draw.cpp">
+    <ClCompile Include="Include\ImGUI\imgui_draw.cpp">
       <Filter>Header Files\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="imgui_impl_dx11.cpp">
+    <ClCompile Include="Include\ImGUI\imgui_impl_dx11.cpp">
       <Filter>Header Files\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="imgui_impl_win32.cpp">
+    <ClCompile Include="Include\ImGUI\imgui_impl_win32.cpp">
       <Filter>Header Files\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="imgui_widgets.cpp">
+    <ClCompile Include="Include\ImGUI\imgui_widgets.cpp">
       <Filter>Header Files\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="tiny_obj_loader.cc">
-      <Filter>Header Files\tiny_obj_loader</Filter>
+    <ClCompile Include="Include\OpenFBX\miniz.c">
+      <Filter>Header Files\OpenFBX</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\OpenFBX\ofbx.cpp">
+      <Filter>Header Files\OpenFBX</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="imconfig.h">
-      <Filter>Header Files\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui.h">
-      <Filter>Header Files\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui_impl_dx11.h">
-      <Filter>Header Files\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui_impl_win32.h">
-      <Filter>Header Files\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui_internal.h">
-      <Filter>Header Files\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="imstb_rectpack.h">
-      <Filter>Header Files\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="imstb_textedit.h">
-      <Filter>Header Files\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="imstb_truetype.h">
-      <Filter>Header Files\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="tiny_obj_loader.h">
-      <Filter>Header Files\tiny_obj_loader</Filter>
-    </ClInclude>
     <ClInclude Include="Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Include.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ImGUI\imconfig.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ImGUI\imgui.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ImGUI\imgui_impl_dx11.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ImGUI\imgui_impl_win32.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ImGUI\imgui_internal.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ImGUI\imstb_rectpack.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ImGUI\imstb_textedit.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ImGUI\imstb_truetype.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\OpenFBX\miniz.h">
+      <Filter>Header Files\OpenFBX</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\OpenFBX\ofbx.h">
+      <Filter>Header Files\OpenFBX</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="ImGuiVertex.hlsl">
-      <Filter>Resource Files</Filter>
-    </FxCompile>
     <FxCompile Include="pixelShader.hlsl">
       <Filter>Resource Files</Filter>
     </FxCompile>
     <FxCompile Include="vertexShader.hlsl">
       <Filter>Resource Files</Filter>
     </FxCompile>
+    <FxCompile Include="Include\ImGUI\ImGuiVertex.hlsl">
+      <Filter>Header Files\ImGui</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\CO.fbx">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
