@@ -44,7 +44,9 @@ DXGI_SWAP_CHAIN_DESC Window::ConstructSwapChainDescription() {
 
 void Window::CreateDeviceAndSwapChain() {
 	DXGI_SWAP_CHAIN_DESC swapchaindesc = ConstructSwapChainDescription();
-	D3D11CreateDeviceAndSwapChain(NULL, D3D_DRIVER_TYPE_HARDWARE, nullptr, D3D11_CREATE_DEVICE_DEBUG, nullptr, 0, D3D11_SDK_VERSION, &swapchaindesc, &swapchain, &device, nullptr, &context);
+	D3D11CreateDeviceAndSwapChain(
+		NULL, D3D_DRIVER_TYPE_HARDWARE, nullptr, D3D11_CREATE_DEVICE_DEBUG,
+		nullptr, 0, D3D11_SDK_VERSION, &swapchaindesc, &swapchain, &device, nullptr, &context);
 
 	swapchain->GetBuffer(0, IID_PPV_ARGS(&BackBuffer_resource));
 	device->CreateRenderTargetView(BackBuffer_resource.Get(), nullptr, &BackBuffer_Target);
